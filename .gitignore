@@ -1,0 +1,34 @@
+
+.DS_Store
+*/.DS_Store
+*.DS_Store
+*Breakpoints_v2.xcbkptlist
+*/Breakpoints_v2.xcbkptlist
+*/UserInterfaceState.xcuserstate
+
+#Scripts output
+scripts/hooks/pre-commit/output.txt
+
+#Pods
+Pods/
+**/Pods
+*/Pods/
+*/Podfile.lock
+Podfile.lock
+
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.orig
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+## Aditional 
+*/xcschememanagement.plist
+xcuserdata/
+DerivedData

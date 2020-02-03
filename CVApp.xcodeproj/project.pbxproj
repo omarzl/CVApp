@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		425E4D37E05574E0CFA03FC4 /* Pods_CVAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A6662FD2C2D664B5C8DC51 /* Pods_CVAppTests.framework */; };
 		8070F56B23E8E61F00606134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F56A23E8E61F00606134 /* AppDelegate.swift */; };
-		8070F56D23E8E61F00606134 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F56C23E8E61F00606134 /* SceneDelegate.swift */; };
 		8070F57423E8E62100606134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8070F57323E8E62100606134 /* Assets.xcassets */; };
 		8070F57723E8E62100606134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8070F57523E8E62100606134 /* LaunchScreen.storyboard */; };
 		8070F58223E8E62100606134 /* CVAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F58123E8E62100606134 /* CVAppTests.swift */; };
 		8070F59023E8E81000606134 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F58F23E8E81000606134 /* Environment.swift */; };
+		8070F59423E8E8C200606134 /* RootFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F59323E8E8C200606134 /* RootFlow.swift */; };
 		CB1F43DAF0C061DEF1D62349 /* Pods_CVApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D44D6843740F71FD70F6C25 /* Pods_CVApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,6 @@
 		7DBC08BF2F8E618BE421FB70 /* Pods-CVAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CVAppTests/Pods-CVAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8070F56723E8E61F00606134 /* CVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8070F56A23E8E61F00606134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8070F56C23E8E61F00606134 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8070F57323E8E62100606134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8070F57623E8E62100606134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8070F57823E8E62100606134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		8070F58123E8E62100606134 /* CVAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVAppTests.swift; sourceTree = "<group>"; };
 		8070F58323E8E62100606134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8070F58F23E8E81000606134 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		8070F59323E8E8C200606134 /* RootFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlow.swift; sourceTree = "<group>"; };
 		85954B4BF7CA1BF09923089D /* Pods-CVAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVAppTests.release.xcconfig"; path = "Target Support Files/Pods-CVAppTests/Pods-CVAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF50AF47D50FCA317A837B4A /* Pods-CVApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.release.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA3FCFB2E7CDE39167748B55 /* Pods-CVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.debug.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +89,7 @@
 		8070F56923E8E61F00606134 /* CVApp */ = {
 			isa = PBXGroup;
 			children = (
+				8070F59123E8E8B900606134 /* Flows */,
 				8070F58E23E8E80700606134 /* Environment */,
 				8070F58C23E8E7CD00606134 /* Delegate */,
 				8070F58D23E8E7E400606134 /* Assets */,
@@ -110,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				8070F56A23E8E61F00606134 /* AppDelegate.swift */,
-				8070F56C23E8E61F00606134 /* SceneDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -130,6 +130,22 @@
 				8070F58F23E8E81000606134 /* Environment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		8070F59123E8E8B900606134 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				8070F59223E8E8BD00606134 /* Root */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		8070F59223E8E8BD00606134 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				8070F59323E8E8C200606134 /* RootFlow.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		8E14CE0C1236F42EDEE6A10D /* Pods */ = {
@@ -320,8 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8070F56B23E8E61F00606134 /* AppDelegate.swift in Sources */,
+				8070F59423E8E8C200606134 /* RootFlow.swift in Sources */,
 				8070F59023E8E81000606134 /* Environment.swift in Sources */,
-				8070F56D23E8E61F00606134 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +493,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7CEG7XS8U4;
 				INFOPLIST_FILE = CVApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,7 +502,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DEVELOP";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -497,6 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7CEG7XS8U4;
 				INFOPLIST_FILE = CVApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.omarzl.CVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

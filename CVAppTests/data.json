@@ -1,0 +1,14 @@
+[
+    {
+        "text": "Prueba1",
+        "image": "",
+        "text_color": "#000000",
+        "background_color": "#FFFFFF"
+    },
+    {
+        "text": "Prueba2",
+        "image": "https",
+        "text_color": "#000000",
+        "background_color": "#FFFFFF"
+    }
+]

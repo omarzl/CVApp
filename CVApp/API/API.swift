@@ -9,7 +9,11 @@
 import RxSwift
 import Alamofire
 
-class API {
+protocol APIProvider {
+    func getCVData() -> Single<[CVData]>
+}
+
+class API: APIProvider {
     func getCVData() -> Single<[CVData]> {
         return .create { single -> Disposable in
             let url = "https://demo4947727.mockable.io/vc"

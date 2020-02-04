@@ -12,7 +12,7 @@ extension UIColor {
     convenience init(hex: String) {
         var trimmed = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if trimmed.hasPrefix("#") { trimmed.remove(at: trimmed.startIndex) }
-        if trimmed.count != 6 { self.init(white: 1.0, alpha: 1.0) }
+        if trimmed.count != 6 { self.init(white: 1.0, alpha: 0.0) }
         
         var rgbValue:UInt64 = 0
         Scanner(string: trimmed).scanHexInt64(&rgbValue)

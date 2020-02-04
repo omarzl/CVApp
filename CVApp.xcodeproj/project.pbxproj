@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		425E4D37E05574E0CFA03FC4 /* Pods_CVAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A6662FD2C2D664B5C8DC51 /* Pods_CVAppTests.framework */; };
+		800EB11323E9FB6A0084FB19 /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB11223E9FB6A0084FB19 /* TestAPI.swift */; };
+		800EB11523E9FE1D0084FB19 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 800EB11423E9FE1D0084FB19 /* data.json */; };
 		8070F56B23E8E61F00606134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F56A23E8E61F00606134 /* AppDelegate.swift */; };
 		8070F57423E8E62100606134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8070F57323E8E62100606134 /* Assets.xcassets */; };
 		8070F57723E8E62100606134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8070F57523E8E62100606134 /* LaunchScreen.storyboard */; };
@@ -47,6 +49,8 @@
 		1D44D6843740F71FD70F6C25 /* Pods_CVApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CVApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A6662FD2C2D664B5C8DC51 /* Pods_CVAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CVAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC08BF2F8E618BE421FB70 /* Pods-CVAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CVAppTests/Pods-CVAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		800EB11223E9FB6A0084FB19 /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPI.swift; sourceTree = "<group>"; };
+		800EB11423E9FE1D0084FB19 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8070F56723E8E61F00606134 /* CVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8070F56A23E8E61F00606134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8070F57323E8E62100606134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,7 +139,9 @@
 		8070F58023E8E62100606134 /* CVAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				800EB11223E9FB6A0084FB19 /* TestAPI.swift */,
 				8070F58123E8E62100606134 /* CVAppTests.swift */,
+				800EB11423E9FE1D0084FB19 /* data.json */,
 				8070F58323E8E62100606134 /* Info.plist */,
 			);
 			path = CVAppTests;
@@ -367,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800EB11523E9FE1D0084FB19 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800EB11323E9FB6A0084FB19 /* TestAPI.swift in Sources */,
 				8070F58223E8E62100606134 /* CVAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

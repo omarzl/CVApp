@@ -23,9 +23,9 @@ typealias MainInput = (
 final class MainPresenter {
 
     private let wireframe: MainWireframe
-    private let api: API
+    private let api: APIProvider
     
-    init(wireframe: MainWireframe, api: API) {
+    init(wireframe: MainWireframe, api: APIProvider) {
         self.wireframe = wireframe
         self.api = api
     }

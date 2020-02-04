@@ -21,15 +21,15 @@ class TextCell: UICollectionViewCell {
         disposeBag = DisposeBag()
     }
     
-    func set(transform: CGAffineTransform) {
+    func set(textTransform transform: CGAffineTransform) {
         textLabel.transform = transform
     }
 }
 
 extension Reactive where Base: TextCell {
-    var transform: Binder<CGAffineTransform> {
+    var textTransform: Binder<CGAffineTransform> {
         return Binder(self.base) { cell, transform in
-            cell.transform = transform
+            cell.set(textTransform: transform)
         }
     }
 }

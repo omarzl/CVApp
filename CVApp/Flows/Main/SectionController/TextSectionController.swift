@@ -13,7 +13,7 @@ import RxCocoa
 class TextSectionController: ListSectionController, ScrollingSectionController {
     
     private(set) var item = MainItem(index: 0)
-    private let widthSubject = PublishRelay<CGAffineTransform>()
+    private let textTransformSubject = PublishRelay<CGAffineTransform>()
     
     override func didUpdate(to object: Any) {
         guard let object = object as? MainItem else { return }
@@ -27,8 +27,8 @@ class TextSectionController: ListSectionController, ScrollingSectionController {
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell: TextCell = reuse(at: index)
-        widthSubject
-            .bind(to: cell.rx.transform)
+        textTransformSubject
+            .bind(to: cell.rx.textTransform)
             .disposed(by: cell.disposeBag)
         return cell
     }
@@ -49,7 +49,7 @@ class TextSectionController: ListSectionController, ScrollingSectionController {
             scale = 1.0 + (diff - height) * 1.0 / height
         }
         scale = scale < 2.0 ? scale : 2.0
-        widthSubject.accept(CGAffineTransform(scaleX: scale, y: scale))
+        textTransformSubject.accept(CGAffineTransform(scaleX: scale, y: scale))
     }
 }
 

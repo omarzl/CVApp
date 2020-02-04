@@ -46,6 +46,10 @@ private extension MainController {
         let output = presenter.setup(input: ())
         
         output
+            .do(afterNext: { [weak self] _ in
+                guard let self = self else { return }
+                DispatchQueue.main.async { self.scrollViewDidScroll(self.collectionView) }
+            })
             .bind(to: listAdapter.rx.items(at: dataSource))
             .disposed(by: disposeBag)
     }

@@ -14,7 +14,7 @@ class MainItem: NSObject, ListDiffable {
     
     let index: Int
     
-    init(index: Int) {
+    init(index: Int, data: CVData) {
         self.index = index
     }
     

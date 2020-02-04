@@ -12,7 +12,7 @@ import RxCocoa
 
 class TextSectionController: ListSectionController, ScrollingSectionController {
     
-    private(set) var item = MainItem(index: 0)
+    private(set) var item = MainItem(index: 0, data: CVData())
     private let textTransformSubject = PublishRelay<CGAffineTransform>()
     private let imageTransformSubject = PublishRelay<CGAffineTransform>()
     

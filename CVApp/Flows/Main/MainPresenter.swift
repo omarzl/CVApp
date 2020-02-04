@@ -8,20 +8,26 @@
 
 import RxSwift
 import IGListKit
+import RxSwiftExt
 
 typealias MainOutput = (
-    Observable<[ListDiffable]>
+    loading: Observable<Bool>,
+    diffables: Observable<[ListDiffable]>,
+    error: Observable<Error>
 )
 
 typealias MainInput = (
+    Observable<Void>
 )
 
 final class MainPresenter {
 
     private let wireframe: MainWireframe
+    private let api: API
     
-    init(wireframe: MainWireframe) {
+    init(wireframe: MainWireframe, api: API) {
         self.wireframe = wireframe
+        self.api = api
     }
     
     func start() {
@@ -29,6 +35,30 @@ final class MainPresenter {
     }
     
     func setup(input: MainInput) -> MainOutput {
-        return Observable<[ListDiffable]>.just([MainItem(index: 0), MainItem(index: 1), MainItem(index: 2), MainItem(index: 3), MainItem(index: 4), MainItem(index: 5)])
+        
+        let startFlow = input.share().startWith(())
+        
+        let data = startFlow.flatMap { [api] in
+                api.getCVData()
+                    .asObservable()
+                    .map { $0.enumerated().map { MainItem(index: $0, data: $1) } }
+                    .materialize()
+            }
+        .share(replay: 1, scope: .whileConnected)
+        
+        let loading = Observable.merge(
+                startFlow.map { _ in true },
+                data.elements().map { _ in false },
+                data.errors().map { _ in false }
+            )
+            .share()
+        
+        return (
+            loading: loading,
+            diffables: data.elements().map { $0 as [ListDiffable] },
+            error: data.errors()
+        )
     }
 }
+
+

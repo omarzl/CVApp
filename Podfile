@@ -16,6 +16,10 @@ target 'CVApp' do
   pod 'IGListKit', '~> 3.4.0'
   #https://github.com/kean/Nuke
   pod 'Nuke', '~> 8.4.0'
+  #https://github.com/Alamofire/Alamofire
+  pod 'Alamofire', '~> 4.9.0'
+  #https://github.com/SwiftKickMobile/SwiftMessages
+  pod 'SwiftMessages', '~> 7.0.0'
 
   target 'CVAppTests' do
     inherit! :search_paths

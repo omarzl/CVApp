@@ -14,7 +14,7 @@ final class MainFlow {
 
     init(window: UIWindow?) {
         let wireframe = MainWireframe(window: window)
-        presenter = MainPresenter(wireframe: wireframe)
+        presenter = MainPresenter(wireframe: wireframe, api: API())
     }
     
     func start() {

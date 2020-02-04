@@ -28,6 +28,10 @@ class TextCell: UICollectionViewCell {
         textLabel.text = text
     }
     
+    func set(textColor color: UIColor) {
+        textLabel.textColor = color
+    }
+    
     func set(image: String) {
         guard let url = URL(string: image) else { return }
         Nuke.loadImage(with: url, options: ImageLoadingOptions(), into: imageView, progress: nil) { [imageView] result in

@@ -29,6 +29,7 @@
 		8090C91523E90EF30055FB9F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91423E90EF30055FB9F /* API.swift */; };
 		8090C91823E90F5D0055FB9F /* CVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91723E90F5D0055FB9F /* CVData.swift */; };
 		8090C91A23E9BA9D0055FB9F /* UIRefreshControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91923E9BA9D0055FB9F /* UIRefreshControlExtension.swift */; };
+		8090C91D23E9E40F0055FB9F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91C23E9E40F0055FB9F /* StringExtension.swift */; };
 		CB1F43DAF0C061DEF1D62349 /* Pods_CVApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D44D6843740F71FD70F6C25 /* Pods_CVApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		8090C91423E90EF30055FB9F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8090C91723E90F5D0055FB9F /* CVData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVData.swift; sourceTree = "<group>"; };
 		8090C91923E9BA9D0055FB9F /* UIRefreshControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControlExtension.swift; sourceTree = "<group>"; };
+		8090C91C23E9E40F0055FB9F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		85954B4BF7CA1BF09923089D /* Pods-CVAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVAppTests.release.xcconfig"; path = "Target Support Files/Pods-CVAppTests/Pods-CVAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF50AF47D50FCA317A837B4A /* Pods-CVApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.release.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA3FCFB2E7CDE39167748B55 /* Pods-CVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.debug.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				8070F5A323E8EC9400606134 /* ListAdapterExtension.swift */,
 				8090C91923E9BA9D0055FB9F /* UIRefreshControlExtension.swift */,
+				8090C91C23E9E40F0055FB9F /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				8090C91A23E9BA9D0055FB9F /* UIRefreshControlExtension.swift in Sources */,
 				8070F59423E8E8C200606134 /* RootFlow.swift in Sources */,
 				8090C91523E90EF30055FB9F /* API.swift in Sources */,
+				8090C91D23E9E40F0055FB9F /* StringExtension.swift in Sources */,
 				8070F5AF23E8F1CA00606134 /* MainItem.swift in Sources */,
 				8070F5B423E8F63F00606134 /* TextCell.swift in Sources */,
 				8090C91823E90F5D0055FB9F /* CVData.swift in Sources */,

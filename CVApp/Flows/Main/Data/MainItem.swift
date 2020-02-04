@@ -15,11 +15,13 @@ class MainItem: NSObject, ListDiffable {
     let index: Int
     let text: String
     let image: String
+    let textColor: UIColor
     
     init(index: Int, data: CVData) {
         self.index = index
         text = data.text
         image = data.image
+        textColor = UIColor(hex: data.textColor)
     }
     
     func diffIdentifier() -> NSObjectProtocol {

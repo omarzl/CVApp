@@ -29,6 +29,7 @@ class TextSectionController: ListSectionController, ScrollingSectionController {
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell: TextCell = reuse(at: index)
         cell.set(text: item.text)
+        cell.set(textColor: item.textColor)
         cell.set(image: item.image)
         textTransformSubject
             .bind(to: cell.rx.textTransform)

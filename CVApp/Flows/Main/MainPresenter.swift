@@ -6,7 +6,15 @@
 //  Copyright © 2020 Omar Zúñiga Lagunas. All rights reserved.
 //
 
-import UIKit
+import RxSwift
+import IGListKit
+
+typealias MainOutput = (
+    Observable<[ListDiffable]>
+)
+
+typealias MainInput = (
+)
 
 final class MainPresenter {
 
@@ -18,5 +26,9 @@ final class MainPresenter {
     
     func start() {
         wireframe.showView(presenter: self)
+    }
+    
+    func setup(input: MainInput) -> MainOutput {
+        return Observable<[ListDiffable]>.just([MainItem(index: 0), MainItem(index: 1), MainItem(index: 2)])
     }
 }

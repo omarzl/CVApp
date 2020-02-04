@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import IGListKit
+import RxSwift
+import RxCocoa
 
 final class MainController: UIViewController {
-
-    @IBOutlet private weak var collectionView: UICollectionView!
     
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            listAdapter.collectionView = collectionView
+            listAdapter.dataSource = dataSource
+            listAdapter.scrollViewDelegate = self
+        }
+    }
+    
+    private let dataSource = MainDataSource()
+    private lazy var listAdapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
+    private let disposeBag = DisposeBag()
     private let presenter: MainPresenter
     
     init(presenter: MainPresenter) {
@@ -22,4 +34,33 @@ final class MainController: UIViewController {
     required init?(coder: NSCoder) {
         return nil
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bind()
+    }
 }
+
+private extension MainController {
+    func bind() {
+        let output = presenter.setup(input: ())
+        
+        output
+            .bind(to: listAdapter.rx.items(at: dataSource))
+            .disposed(by: disposeBag)
+    }
+}
+
+extension MainController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        listAdapter.visibleSectionControllers().forEach {
+            guard let sectionController = $0 as? ScrollingSectionController else { return }
+            let diffHeight = CGFloat(sectionController.item.index) * sectionController.height
+            if sectionController.item.index == 1 {
+                sectionController.didScroll(offset: scrollView.contentOffset.y - diffHeight)
+            }
+        }
+    }
+}
+
+

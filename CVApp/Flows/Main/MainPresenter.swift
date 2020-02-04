@@ -29,6 +29,6 @@ final class MainPresenter {
     }
     
     func setup(input: MainInput) -> MainOutput {
-        return Observable<[ListDiffable]>.just([MainItem(index: 0), MainItem(index: 1), MainItem(index: 2)])
+        return Observable<[ListDiffable]>.just([MainItem(index: 0), MainItem(index: 1), MainItem(index: 2), MainItem(index: 3), MainItem(index: 4), MainItem(index: 5)])
     }
 }

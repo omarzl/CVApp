@@ -21,10 +21,11 @@
 		8070F59F23E8EAA400606134 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8070F59D23E8EAA400606134 /* MainController.xib */; };
 		8070F5A123E8EC5D00606134 /* MainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5A023E8EC5D00606134 /* MainDataSource.swift */; };
 		8070F5A423E8EC9400606134 /* ListAdapterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5A323E8EC9400606134 /* ListAdapterExtension.swift */; };
-		8070F5A923E8ED2F00606134 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5A723E8ED2F00606134 /* EmptyCell.swift */; };
-		8070F5AA23E8ED2F00606134 /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8070F5A823E8ED2F00606134 /* EmptyCell.xib */; };
-		8070F5AC23E8ED6400606134 /* EmptySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5AB23E8ED6400606134 /* EmptySectionController.swift */; };
+		8070F5AC23E8ED6400606134 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5AB23E8ED6400606134 /* TextSectionController.swift */; };
 		8070F5AF23E8F1CA00606134 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5AE23E8F1CA00606134 /* MainItem.swift */; };
+		8070F5B123E8F5D600606134 /* ScrollingSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5B023E8F5D600606134 /* ScrollingSectionController.swift */; };
+		8070F5B423E8F63F00606134 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5B223E8F63F00606134 /* TextCell.swift */; };
+		8070F5B523E8F63F00606134 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8070F5B323E8F63F00606134 /* TextCell.xib */; };
 		CB1F43DAF0C061DEF1D62349 /* Pods_CVApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D44D6843740F71FD70F6C25 /* Pods_CVApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,10 +60,11 @@
 		8070F59D23E8EAA400606134 /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
 		8070F5A023E8EC5D00606134 /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
 		8070F5A323E8EC9400606134 /* ListAdapterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAdapterExtension.swift; sourceTree = "<group>"; };
-		8070F5A723E8ED2F00606134 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
-		8070F5A823E8ED2F00606134 /* EmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
-		8070F5AB23E8ED6400606134 /* EmptySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySectionController.swift; sourceTree = "<group>"; };
+		8070F5AB23E8ED6400606134 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
 		8070F5AE23E8F1CA00606134 /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
+		8070F5B023E8F5D600606134 /* ScrollingSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingSectionController.swift; sourceTree = "<group>"; };
+		8070F5B223E8F63F00606134 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		8070F5B323E8F63F00606134 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		85954B4BF7CA1BF09923089D /* Pods-CVAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVAppTests.release.xcconfig"; path = "Target Support Files/Pods-CVAppTests/Pods-CVAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF50AF47D50FCA317A837B4A /* Pods-CVApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.release.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA3FCFB2E7CDE39167748B55 /* Pods-CVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.debug.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,7 +201,8 @@
 		8070F5A523E8ED1300606134 /* SectionController */ = {
 			isa = PBXGroup;
 			children = (
-				8070F5AB23E8ED6400606134 /* EmptySectionController.swift */,
+				8070F5AB23E8ED6400606134 /* TextSectionController.swift */,
+				8070F5B023E8F5D600606134 /* ScrollingSectionController.swift */,
 			);
 			path = SectionController;
 			sourceTree = "<group>";
@@ -207,8 +210,8 @@
 		8070F5A623E8ED1F00606134 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8070F5A723E8ED2F00606134 /* EmptyCell.swift */,
-				8070F5A823E8ED2F00606134 /* EmptyCell.xib */,
+				8070F5B223E8F63F00606134 /* TextCell.swift */,
+				8070F5B323E8F63F00606134 /* TextCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -326,8 +329,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8070F57723E8E62100606134 /* LaunchScreen.storyboard in Resources */,
-				8070F5AA23E8ED2F00606134 /* EmptyCell.xib in Resources */,
 				8070F57423E8E62100606134 /* Assets.xcassets in Resources */,
+				8070F5B523E8F63F00606134 /* TextCell.xib in Resources */,
 				8070F59F23E8EAA400606134 /* MainController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,18 +413,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8070F5AC23E8ED6400606134 /* EmptySectionController.swift in Sources */,
+				8070F5AC23E8ED6400606134 /* TextSectionController.swift in Sources */,
+				8070F5B123E8F5D600606134 /* ScrollingSectionController.swift in Sources */,
 				8070F59923E8EA9300606134 /* MainPresenter.swift in Sources */,
 				8070F59E23E8EAA400606134 /* MainController.swift in Sources */,
 				8070F56B23E8E61F00606134 /* AppDelegate.swift in Sources */,
 				8070F59423E8E8C200606134 /* RootFlow.swift in Sources */,
 				8070F5AF23E8F1CA00606134 /* MainItem.swift in Sources */,
+				8070F5B423E8F63F00606134 /* TextCell.swift in Sources */,
 				8070F59B23E8EA9900606134 /* MainWireframe.swift in Sources */,
 				8070F5A423E8EC9400606134 /* ListAdapterExtension.swift in Sources */,
 				8070F59723E8EA8A00606134 /* MainFlow.swift in Sources */,
 				8070F59023E8E81000606134 /* Environment.swift in Sources */,
 				8070F5A123E8EC5D00606134 /* MainDataSource.swift in Sources */,
-				8070F5A923E8ED2F00606134 /* EmptyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

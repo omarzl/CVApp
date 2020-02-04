@@ -56,9 +56,7 @@ extension MainController: UIScrollViewDelegate {
         listAdapter.visibleSectionControllers().forEach {
             guard let sectionController = $0 as? ScrollingSectionController else { return }
             let diffHeight = CGFloat(sectionController.item.index) * sectionController.height
-            if sectionController.item.index == 1 {
-                sectionController.didScroll(offset: scrollView.contentOffset.y - diffHeight)
-            }
+            sectionController.didScroll(offset: scrollView.contentOffset.y - diffHeight, viewSize: collectionView.frame.size)
         }
     }
 }

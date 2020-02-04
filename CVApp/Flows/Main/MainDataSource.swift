@@ -20,7 +20,7 @@ extension MainDataSource: ListAdapterDataSource {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return EmptySectionController()
+        return TextSectionController()
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {

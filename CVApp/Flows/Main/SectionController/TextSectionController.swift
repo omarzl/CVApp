@@ -31,6 +31,7 @@ class TextSectionController: ListSectionController, ScrollingSectionController {
         cell.set(text: item.text)
         cell.set(textColor: item.textColor)
         cell.set(image: item.image)
+        cell.set(backgroundColor: item.backgroundColor)
         textTransformSubject
             .bind(to: cell.rx.textTransform)
             .disposed(by: cell.disposeBag)
@@ -59,10 +60,10 @@ class TextSectionController: ListSectionController, ScrollingSectionController {
             textScale = 0.1
             imageScale = 1.5
         } else {
-            textScale = 1.0 + (diff - height) * 1.0 / height
+            textScale = 1.0 + (diff - height) * 0.5 / height
             imageScale = 1.0
         }
-        textScale = textScale < 2.0 ? textScale : 2.0
+        textScale = textScale < 1.5 ? textScale : 1.5
         imageScale = imageScale > 1.0 ? imageScale : 1.0
         textTransformSubject.accept(CGAffineTransform(scaleX: textScale, y: textScale))
         imageTransformSubject.accept(CGAffineTransform(scaleX: imageScale, y: imageScale))

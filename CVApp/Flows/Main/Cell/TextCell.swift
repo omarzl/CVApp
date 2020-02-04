@@ -22,6 +22,7 @@ class TextCell: UICollectionViewCell {
         super.prepareForReuse()
         disposeBag = DisposeBag()
         imageView.image = nil
+        backgroundColor = .white
     }
     
     func set(text: String) {
@@ -30,6 +31,10 @@ class TextCell: UICollectionViewCell {
     
     func set(textColor color: UIColor) {
         textLabel.textColor = color
+    }
+    
+    func set(backgroundColor color: UIColor) {
+        backgroundColor = color
     }
     
     func set(image: String) {

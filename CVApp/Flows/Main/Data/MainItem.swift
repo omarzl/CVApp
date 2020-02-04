@@ -16,12 +16,14 @@ class MainItem: NSObject, ListDiffable {
     let text: String
     let image: String
     let textColor: UIColor
+    let backgroundColor: UIColor
     
     init(index: Int, data: CVData) {
         self.index = index
         text = data.text
         image = data.image
         textColor = UIColor(hex: data.textColor)
+        backgroundColor = UIColor(hex: data.backgroundColor)
     }
     
     func diffIdentifier() -> NSObjectProtocol {

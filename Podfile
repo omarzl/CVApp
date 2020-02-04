@@ -14,6 +14,8 @@ target 'CVApp' do
   pod 'RxSwiftExt', '~> 5.1.0'
   #https://github.com/Instagram/IGListKit
   pod 'IGListKit', '~> 3.4.0'
+  #https://github.com/kean/Nuke
+  pod 'Nuke', '~> 8.4.0'
 
   target 'CVAppTests' do
     inherit! :search_paths

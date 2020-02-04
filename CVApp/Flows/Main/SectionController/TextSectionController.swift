@@ -28,7 +28,8 @@ class TextSectionController: ListSectionController, ScrollingSectionController {
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell: TextCell = reuse(at: index)
-        cell.set(image: "https://i.picsum.photos/id/599/300/150.jpg")
+        cell.set(text: item.text)
+        cell.set(image: item.image)
         textTransformSubject
             .bind(to: cell.rx.textTransform)
             .disposed(by: cell.disposeBag)

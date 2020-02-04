@@ -11,23 +11,22 @@ import Alamofire
 
 class API {
     func getCVData() -> Single<[CVData]> {
-        return Single<[CVData]>.error(RxError.timeout).delay(.milliseconds(500), scheduler: MainScheduler.instance)
-//        return .create { single -> Disposable in
-//            let url = ""
-//            Alamofire.request(url).responseJSON { (response) in
-//                switch response.result {
-//                case .success:
-//                    guard let data = response.data else {
-//                        single(.error(RxError.unknown))
-//                        return
-//                    }
-//                    let result = try? JSONDecoder().decode([CVData].self, from: data)
-//                    single(.success(result ?? []))
-//                case .failure(let error):
-//                    single(.error(error))
-//                }
-//            }
-//            return Disposables.create()
-//        }
+        return .create { single -> Disposable in
+            let url = "https://demo4947727.mockable.io/vc"
+            Alamofire.request(url).responseJSON { (response) in
+                switch response.result {
+                case .success:
+                    guard let data = response.data else {
+                        single(.error(RxError.unknown))
+                        return
+                    }
+                    let result = try? JSONDecoder().decode([CVData].self, from: data)
+                    single(.success(result ?? []))
+                case .failure(let error):
+                    single(.error(error))
+                }
+            }
+            return Disposables.create()
+        }
     }
 }

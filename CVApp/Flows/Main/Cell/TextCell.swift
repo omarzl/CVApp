@@ -24,6 +24,10 @@ class TextCell: UICollectionViewCell {
         imageView.image = nil
     }
     
+    func set(text: String) {
+        textLabel.text = text
+    }
+    
     func set(image: String) {
         guard let url = URL(string: image) else { return }
         Nuke.loadImage(with: url, options: ImageLoadingOptions(), into: imageView, progress: nil) { [imageView] result in

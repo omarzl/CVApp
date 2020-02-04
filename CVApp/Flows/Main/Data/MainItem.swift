@@ -13,9 +13,13 @@ import IGListKit
 class MainItem: NSObject, ListDiffable {
     
     let index: Int
+    let text: String
+    let image: String
     
     init(index: Int, data: CVData) {
         self.index = index
+        text = data.text
+        image = data.image
     }
     
     func diffIdentifier() -> NSObjectProtocol {

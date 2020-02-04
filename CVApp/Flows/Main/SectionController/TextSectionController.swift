@@ -37,9 +37,6 @@ class TextSectionController: ListSectionController, ScrollingSectionController {
         var scale: CGFloat
         guard offset > -viewSize.height else { return }
         let diff = offset + viewSize.height
-        if item.index == 0 {
-            print(offset)
-        }
         if diff < (height / 2) {
             scale = 0.1
         } else if diff < height {

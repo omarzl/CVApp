@@ -6,7 +6,7 @@
 //  Copyright © 2020 Omar Zúñiga Lagunas. All rights reserved.
 //
 
-import CoreGraphics
+import UIKit
 
 protocol ScrollingSectionController {
     
@@ -17,5 +17,5 @@ protocol ScrollingSectionController {
 }
 
 extension ScrollingSectionController {
-    var height: CGFloat { return 200 }
+    var height: CGFloat { return UIScreen.main.bounds.size.width / 2 }
 }

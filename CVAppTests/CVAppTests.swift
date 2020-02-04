@@ -7,28 +7,41 @@
 //
 
 import XCTest
+import RxSwift
 @testable import CVApp
 
 class CVAppTests: XCTestCase {
-
+    
+    let presenter: MainPresenter = {
+        let wireframe = MainWireframe(window: nil)
+        let api = TestAPI()
+        return MainPresenter(wireframe: wireframe, api: api)
+    }()
+    
+    var disposeBag = DisposeBag()
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        disposeBag = DisposeBag()
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testData() {
+        let output = presenter.setup(input: Observable<Void>.empty())
+        output.diffables
+            .subscribe(onNext: { [weak self] diffables in
+                guard let items = diffables as? [MainItem] else {
+                    XCTAssertTrue(false, "The mapping is wrong!")
+                    return
+                }
+                self?.validate(data: items)
+            })
+            .disposed(by: disposeBag)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func validate(data: [MainItem]) {
+        XCTAssertTrue(data.count == 2)
+        data.forEach {
+            XCTAssertTrue($0.backgroundColor != .clear, "Something is wrong with the color mapping")
         }
     }
-
 }

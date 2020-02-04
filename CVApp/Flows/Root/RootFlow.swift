@@ -12,7 +12,7 @@ class RootFlow {
 
     func start() -> UIWindow? {
         let window = UIWindow()
-        window.rootViewController = UIViewController()
+        MainFlow(window: window).start()
         window.makeKeyAndVisible()
         return window
     }

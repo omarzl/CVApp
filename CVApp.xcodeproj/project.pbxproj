@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		425E4D37E05574E0CFA03FC4 /* Pods_CVAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A6662FD2C2D664B5C8DC51 /* Pods_CVAppTests.framework */; };
+		800EB11323E9FB6A0084FB19 /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB11223E9FB6A0084FB19 /* TestAPI.swift */; };
+		800EB11523E9FE1D0084FB19 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 800EB11423E9FE1D0084FB19 /* data.json */; };
 		8070F56B23E8E61F00606134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F56A23E8E61F00606134 /* AppDelegate.swift */; };
 		8070F57423E8E62100606134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8070F57323E8E62100606134 /* Assets.xcassets */; };
 		8070F57723E8E62100606134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8070F57523E8E62100606134 /* LaunchScreen.storyboard */; };
 		8070F58223E8E62100606134 /* CVAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F58123E8E62100606134 /* CVAppTests.swift */; };
 		8070F59023E8E81000606134 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F58F23E8E81000606134 /* Environment.swift */; };
 		8070F59423E8E8C200606134 /* RootFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F59323E8E8C200606134 /* RootFlow.swift */; };
+		8070F59723E8EA8A00606134 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F59623E8EA8A00606134 /* MainFlow.swift */; };
+		8070F59923E8EA9300606134 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F59823E8EA9300606134 /* MainPresenter.swift */; };
+		8070F59B23E8EA9900606134 /* MainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F59A23E8EA9900606134 /* MainWireframe.swift */; };
+		8070F59E23E8EAA400606134 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F59C23E8EAA400606134 /* MainController.swift */; };
+		8070F59F23E8EAA400606134 /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8070F59D23E8EAA400606134 /* MainController.xib */; };
+		8070F5A123E8EC5D00606134 /* MainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5A023E8EC5D00606134 /* MainDataSource.swift */; };
+		8070F5A423E8EC9400606134 /* ListAdapterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5A323E8EC9400606134 /* ListAdapterExtension.swift */; };
+		8070F5AC23E8ED6400606134 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5AB23E8ED6400606134 /* TextSectionController.swift */; };
+		8070F5AF23E8F1CA00606134 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5AE23E8F1CA00606134 /* MainItem.swift */; };
+		8070F5B123E8F5D600606134 /* ScrollingSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5B023E8F5D600606134 /* ScrollingSectionController.swift */; };
+		8070F5B423E8F63F00606134 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070F5B223E8F63F00606134 /* TextCell.swift */; };
+		8070F5B523E8F63F00606134 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8070F5B323E8F63F00606134 /* TextCell.xib */; };
+		8090C91523E90EF30055FB9F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91423E90EF30055FB9F /* API.swift */; };
+		8090C91823E90F5D0055FB9F /* CVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91723E90F5D0055FB9F /* CVData.swift */; };
+		8090C91A23E9BA9D0055FB9F /* UIRefreshControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91923E9BA9D0055FB9F /* UIRefreshControlExtension.swift */; };
+		8090C91D23E9E40F0055FB9F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8090C91C23E9E40F0055FB9F /* StringExtension.swift */; };
 		CB1F43DAF0C061DEF1D62349 /* Pods_CVApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D44D6843740F71FD70F6C25 /* Pods_CVApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +49,8 @@
 		1D44D6843740F71FD70F6C25 /* Pods_CVApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CVApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A6662FD2C2D664B5C8DC51 /* Pods_CVAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CVAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC08BF2F8E618BE421FB70 /* Pods-CVAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CVAppTests/Pods-CVAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		800EB11223E9FB6A0084FB19 /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPI.swift; sourceTree = "<group>"; };
+		800EB11423E9FE1D0084FB19 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8070F56723E8E61F00606134 /* CVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8070F56A23E8E61F00606134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8070F57323E8E62100606134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +61,22 @@
 		8070F58323E8E62100606134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8070F58F23E8E81000606134 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		8070F59323E8E8C200606134 /* RootFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlow.swift; sourceTree = "<group>"; };
+		8070F59623E8EA8A00606134 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		8070F59823E8EA9300606134 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		8070F59A23E8EA9900606134 /* MainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWireframe.swift; sourceTree = "<group>"; };
+		8070F59C23E8EAA400606134 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		8070F59D23E8EAA400606134 /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
+		8070F5A023E8EC5D00606134 /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
+		8070F5A323E8EC9400606134 /* ListAdapterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAdapterExtension.swift; sourceTree = "<group>"; };
+		8070F5AB23E8ED6400606134 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
+		8070F5AE23E8F1CA00606134 /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
+		8070F5B023E8F5D600606134 /* ScrollingSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingSectionController.swift; sourceTree = "<group>"; };
+		8070F5B223E8F63F00606134 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		8070F5B323E8F63F00606134 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
+		8090C91423E90EF30055FB9F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8090C91723E90F5D0055FB9F /* CVData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVData.swift; sourceTree = "<group>"; };
+		8090C91923E9BA9D0055FB9F /* UIRefreshControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRefreshControlExtension.swift; sourceTree = "<group>"; };
+		8090C91C23E9E40F0055FB9F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		85954B4BF7CA1BF09923089D /* Pods-CVAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVAppTests.release.xcconfig"; path = "Target Support Files/Pods-CVAppTests/Pods-CVAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF50AF47D50FCA317A837B4A /* Pods-CVApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.release.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA3FCFB2E7CDE39167748B55 /* Pods-CVApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CVApp.debug.xcconfig"; path = "Target Support Files/Pods-CVApp/Pods-CVApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,9 +125,11 @@
 		8070F56923E8E61F00606134 /* CVApp */ = {
 			isa = PBXGroup;
 			children = (
-				8070F59123E8E8B900606134 /* Flows */,
 				8070F58E23E8E80700606134 /* Environment */,
 				8070F58C23E8E7CD00606134 /* Delegate */,
+				8090C91323E90EDB0055FB9F /* API */,
+				8070F59123E8E8B900606134 /* Flows */,
+				8070F5A223E8EC8600606134 /* Extensions */,
 				8070F58D23E8E7E400606134 /* Assets */,
 				8070F57823E8E62100606134 /* Info.plist */,
 			);
@@ -101,7 +139,9 @@
 		8070F58023E8E62100606134 /* CVAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				800EB11223E9FB6A0084FB19 /* TestAPI.swift */,
 				8070F58123E8E62100606134 /* CVAppTests.swift */,
+				800EB11423E9FE1D0084FB19 /* data.json */,
 				8070F58323E8E62100606134 /* Info.plist */,
 			);
 			path = CVAppTests;
@@ -136,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				8070F59223E8E8BD00606134 /* Root */,
+				8070F59523E8EA8000606134 /* Main */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -146,6 +187,75 @@
 				8070F59323E8E8C200606134 /* RootFlow.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		8070F59523E8EA8000606134 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8070F5AD23E8F1B700606134 /* Data */,
+				8070F5A623E8ED1F00606134 /* Cell */,
+				8070F5A523E8ED1300606134 /* SectionController */,
+				8070F59623E8EA8A00606134 /* MainFlow.swift */,
+				8070F5A023E8EC5D00606134 /* MainDataSource.swift */,
+				8070F59823E8EA9300606134 /* MainPresenter.swift */,
+				8070F59C23E8EAA400606134 /* MainController.swift */,
+				8070F59D23E8EAA400606134 /* MainController.xib */,
+				8070F59A23E8EA9900606134 /* MainWireframe.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8070F5A223E8EC8600606134 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8070F5A323E8EC9400606134 /* ListAdapterExtension.swift */,
+				8090C91923E9BA9D0055FB9F /* UIRefreshControlExtension.swift */,
+				8090C91C23E9E40F0055FB9F /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8070F5A523E8ED1300606134 /* SectionController */ = {
+			isa = PBXGroup;
+			children = (
+				8070F5AB23E8ED6400606134 /* TextSectionController.swift */,
+				8070F5B023E8F5D600606134 /* ScrollingSectionController.swift */,
+			);
+			path = SectionController;
+			sourceTree = "<group>";
+		};
+		8070F5A623E8ED1F00606134 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8070F5B223E8F63F00606134 /* TextCell.swift */,
+				8070F5B323E8F63F00606134 /* TextCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8070F5AD23E8F1B700606134 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8070F5AE23E8F1CA00606134 /* MainItem.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8090C91323E90EDB0055FB9F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8090C91623E90F4D0055FB9F /* Model */,
+				8090C91423E90EF30055FB9F /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8090C91623E90F4D0055FB9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8090C91723E90F5D0055FB9F /* CVData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8E14CE0C1236F42EDEE6A10D /* Pods */ = {
@@ -254,6 +364,8 @@
 			files = (
 				8070F57723E8E62100606134 /* LaunchScreen.storyboard in Resources */,
 				8070F57423E8E62100606134 /* Assets.xcassets in Resources */,
+				8070F5B523E8F63F00606134 /* TextCell.xib in Resources */,
+				8070F59F23E8EAA400606134 /* MainController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800EB11523E9FE1D0084FB19 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,9 +448,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8070F5AC23E8ED6400606134 /* TextSectionController.swift in Sources */,
+				8070F5B123E8F5D600606134 /* ScrollingSectionController.swift in Sources */,
+				8070F59923E8EA9300606134 /* MainPresenter.swift in Sources */,
+				8070F59E23E8EAA400606134 /* MainController.swift in Sources */,
 				8070F56B23E8E61F00606134 /* AppDelegate.swift in Sources */,
+				8090C91A23E9BA9D0055FB9F /* UIRefreshControlExtension.swift in Sources */,
 				8070F59423E8E8C200606134 /* RootFlow.swift in Sources */,
+				8090C91523E90EF30055FB9F /* API.swift in Sources */,
+				8090C91D23E9E40F0055FB9F /* StringExtension.swift in Sources */,
+				8070F5AF23E8F1CA00606134 /* MainItem.swift in Sources */,
+				8070F5B423E8F63F00606134 /* TextCell.swift in Sources */,
+				8090C91823E90F5D0055FB9F /* CVData.swift in Sources */,
+				8070F59B23E8EA9900606134 /* MainWireframe.swift in Sources */,
+				8070F5A423E8EC9400606134 /* ListAdapterExtension.swift in Sources */,
+				8070F59723E8EA8A00606134 /* MainFlow.swift in Sources */,
 				8070F59023E8E81000606134 /* Environment.swift in Sources */,
+				8070F5A123E8EC5D00606134 /* MainDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800EB11323E9FB6A0084FB19 /* TestAPI.swift in Sources */,
 				8070F58223E8E62100606134 /* CVAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
